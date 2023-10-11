@@ -2,7 +2,9 @@
 export default function NotFound() {
     return (
         <>
-            Página não encontrada
+            <p className="text-gray-500 text-lg">
+                Página não encontrada
+            </p>
         </>
     );
 }

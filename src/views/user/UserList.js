@@ -2,7 +2,9 @@
 export default function UserList() {
     return (
         <>
-            Lista de usuários
+            <p className="text-gray-500 text-lg">
+                Lista de usuários
+            </p>
         </>
     );
 }

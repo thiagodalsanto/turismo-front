@@ -2,7 +2,9 @@
 export default function Home() {
     return (
         <>
-            Página inicial
+            <p className="text-gray-500 text-lg">
+                Página inicial
+            </p>
         </>
     );
 }

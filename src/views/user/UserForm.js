@@ -2,7 +2,9 @@
 export default function UserForm() {
     return (
         <>
-            Fomulario de usuário
+            <p className="text-gray-500 text-lg">
+                Formulário de usuário
+            </p>
         </>
     );
 }
