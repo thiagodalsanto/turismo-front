@@ -38,11 +38,6 @@ export default function NavBar({ darkMode, setDarkMode }) {
                         Tours
                     </Link>
                     </li>
-                    <li>
-                        <Link to="/" className={`block py-2 px-3 md:p-0 rounded dark:text-gray-300 ${location.pathname === '/' ? 'text-fuchsia-600 dark:text-fuchsia-600 hover:text-fuchsia-500	dark:hover:text-fuchsia-700' : 'text-gray-700 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300'}`}>
-                            Services
-                        </Link>
-                    </li>
                 </ul>
             </div>
             </div>
