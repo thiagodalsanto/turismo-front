@@ -6,8 +6,6 @@ import { useEffect, useState } from "react";
 
 export default function App() {
 
-  // let [darkMode, setDarkMode] = useState(false);
-
   let [darkMode, setDarkMode] = useState(() => {
     const storedDarkMode = localStorage.getItem("darkMode");
 

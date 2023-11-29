@@ -4,6 +4,8 @@ import UserForm from "./views/user/UserForm";
 import UserRegisterForm from "./views/user/UserRegisterForm";
 import NotFound from "./views/NotFound";
 import TourGalery from "./views/TourGalery";
+import DetailPage from "./views/DetailPage";
+import CartPage from "./views/CartPage";
 
 const AppRoutes = () => {
     return (
@@ -14,6 +16,8 @@ const AppRoutes = () => {
             <Route path="/user/:id" element={ <UserForm/> } />
             <Route path="/tour" element={ <TourGalery/> } />
             <Route path="*" element={ <NotFound/> } />
+            <Route path="/tour-detail" element={ <DetailPage/> } />
+            <Route path="/cart" element={ <CartPage /> } />
         </Routes>
     );
 }
