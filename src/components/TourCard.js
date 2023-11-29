@@ -1,7 +1,7 @@
 
 export default function TourCard({ imageURL, placeName, rating, price }) {
     return (
-        <div class="w-full max-w-sm max-h-96 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div class="w-full max-w-sm max-h-96 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 shadow-md">
             <a href="/tour-detail">
                 <img class="rounded-t-lg object-cover h-48 w-96" src={imageURL} alt="product" />
             </a>

@@ -6,6 +6,7 @@ import NotFound from "./views/NotFound";
 import TourGalery from "./views/TourGalery";
 import DetailPage from "./views/DetailPage";
 import CartPage from "./views/CartPage";
+import DashboardHome from "./views/manager/DashboardHome";
 
 const AppRoutes = () => {
     return (
@@ -18,6 +19,7 @@ const AppRoutes = () => {
             <Route path="*" element={ <NotFound/> } />
             <Route path="/tour-detail" element={ <DetailPage/> } />
             <Route path="/cart" element={ <CartPage /> } />
+            <Route path="/manager-home" element={ < DashboardHome /> } />
         </Routes>
     );
 }

@@ -2,9 +2,9 @@ import CartItem from "../components/CartItem";
 
 export default function CartPage() {
     return (
-        <section class="flex items-center bg-stone-200 lg:h-screen font-poppins dark:bg-gray-700 ">
+        <section class="flex items-center bg-stone-100 lg:h-screen font-poppins dark:bg-gray-700">
             <div class="justify-center flex-1 px-4 py-6 mx-auto max-w-7xl lg:py-4 md:px-6">
-                <div class="p-8 bg-gray-50 dark:bg-gray-800">
+                <div class="p-8 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md">
                     <h2 class="mb-8 text-4xl font-bold dark:text-gray-400">Your Cart</h2>
                     <div class="flex flex-wrap -mx-4">
                         <div class="w-full px-4 mb-8 xl:w-8/12 xl:mb-0">
