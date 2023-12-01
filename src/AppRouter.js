@@ -7,6 +7,7 @@ import TourGalery from "./views/TourGalery";
 import DetailPage from "./views/DetailPage";
 import CartPage from "./views/CartPage";
 import DashboardHome from "./views/manager/DashboardHome";
+import TourRegistration from "./views/manager/TourRegistration";
 
 const AppRoutes = () => {
     return (
@@ -20,6 +21,7 @@ const AppRoutes = () => {
             <Route path="/tour-detail" element={ <DetailPage/> } />
             <Route path="/cart" element={ <CartPage /> } />
             <Route path="/manager-home" element={ < DashboardHome /> } />
+            <Route path="/tour-registration" element={ <TourRegistration/> } />
         </Routes>
     );
 }
