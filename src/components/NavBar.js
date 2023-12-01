@@ -4,11 +4,11 @@ export default function NavBar({ darkMode, setDarkMode }) {
     const location = useLocation();
 
     return (
-        <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <nav class="bg-gray-50 border-gray-200 dark:bg-gray-900">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="/images/hot-face-svgrepo-com.svg" class="h-8" alt="Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">EROTURISM</span>
+                <img src="/images/beer.png" class="h-10" alt="Logo" />
+                <span class="self-center text-2xl font-mono font-bold whitespace-nowrap dark:text-white">BeerTourism</span>
             </a>
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                 <button onClick={() => { setDarkMode(!darkMode); }} className="flex justify-center items-center mr-2 rounded-lg bg-gray-300 hover:bg-gray-400 dark:hover:bg-gray-600 dark:bg-gray-700 w-9 h-9">

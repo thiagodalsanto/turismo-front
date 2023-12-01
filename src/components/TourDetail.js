@@ -1,7 +1,7 @@
 
 export default function TourDetail({ placeName, price, placeImage, description, reviews }) {
     return (
-        <div class="bg-white py-11 font-poppins dark:bg-gray-800 w-screen">
+        <div class="bg-white py-11 font-poppins dark:bg-gray-800 w-screen mt-2">
             <div class="max-w-6xl px-4 py-4 mx-auto lg:py-8 md:px-6">
                 <div class="flex flex-wrap -mx-4">
                     <div class="w-full px-4 md:w-1/2 ">
