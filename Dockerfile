@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Expõe a porta 80 para conexões externas
-EXPOSE 80
+EXPOSE 3000
 
 # Comando para iniciar a aplicação quando o contêiner for iniciado
 CMD ["npm", "start"]
