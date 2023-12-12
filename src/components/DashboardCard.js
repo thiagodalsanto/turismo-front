@@ -1,7 +1,7 @@
 
 export default function DashboardCard({ tourImage, tourName, tourCategorie, tourDescription }) {
     return (
-        <div tabindex="0" aria-label="card 1" class="focus:outline-none lg:w-4/12 lg:mr-7 lg:mb-0 mb-7 bg-white dark:bg-gray-600 p-6 shadow rounded h-64">
+        <div tabindex="0" aria-label="card 1" class="focus:outline-none lg:w-4/12 lg:mr-7 lg:mb-0 mb-7 bg-gray-100 dark:bg-gray-800 p-6 shadow rounded h-64">
             <div class="flex items-center border-b border-gray-200 pb-6">
                 <img src={tourImage} alt="coin avatar" class="w-12 h-12 rounded-full" />
                 <div class="flex items-start justify-between w-full">

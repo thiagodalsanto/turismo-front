@@ -3,7 +3,7 @@ import TourCard from "../components/TourCard";
 export default function TourGalery() {
     return (
         <>
-            <section class="pt-10 pb-16 bg-gray-50 dark:bg-gray-900 flex justify-center align-center h-screen">
+            <section class="pt-10 pb-16 bg-stone-200 dark:bg-gray-900 flex justify-center align-center h-screen">
                 <div className="grid grid-cols-4 gap-x-4 gap-y-4">
                     <TourCard imageURL={"https://encurtador.com.br/bksMT"} placeName={"El Nido, Philippines"} rating={"4.4"} price={"599"}/>
                     <TourCard imageURL={"https://encurtador.com.br/mIL69"} placeName={"Soneva Jani, Noonu Atoll, Maldives"} rating={"5.0"} price={"899"}/>

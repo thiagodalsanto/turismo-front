@@ -2,7 +2,7 @@ import CartItem from "../components/CartItem";
 
 export default function CartPage() {
     return (
-        <section class="flex items-center bg-stone-100 lg:h-screen font-poppins dark:bg-gray-700">
+        <section class="flex items-center bg-stone-200 lg:h-screen font-poppins dark:bg-gray-700">
             <div class="justify-center flex-1 px-4 py-6 mx-auto max-w-7xl lg:py-4 md:px-6">
                 <div class="p-8 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md">
                     <h2 class="mb-8 text-4xl font-bold dark:text-gray-400">Your Cart</h2>
@@ -38,10 +38,6 @@ export default function CartPage() {
                                 <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-300 dark:border-gray-700 ">
                                     <span class="text-gray-700 dark:text-gray-400">Subtotal</span>
                                     <span class="text-xl font-bold text-gray-700 dark:text-gray-400 ">$99</span>
-                                </div>
-                                <div class="flex items-center justify-between pb-4 mb-4 ">
-                                    <span class="text-gray-700 dark:text-gray-400 ">Shipping</span>
-                                    <span class="text-xl font-bold text-gray-700 dark:text-gray-400 ">Free</span>
                                 </div>
                                 <div class="flex items-center justify-between pb-4 mb-4 ">
                                     <span class="text-gray-700 dark:text-gray-400">Order Total</span>
