@@ -1,4 +1,4 @@
-import CartItem from "../components/CartItem";
+import CartItem from "../../components/cart/CartItem";
 
 export default function CartPage() {
     return (
@@ -56,7 +56,7 @@ export default function CartPage() {
                                     </a>
                                 </div>
                                 <div class="flex items-center justify-between ">
-                                    <button class="block w-full py-4 font-bold text-center text-gray-100 uppercase bg-blue-500 rounded-md hover:bg-blue-600">Checkout</button>
+                                    <button class="block w-full py-4 font-bold text-center text-gray-100 uppercase bg-blue-500 rounded-md hover:bg-blue-600">Book It</button>
                                 </div>
                             </div>
                         </div>

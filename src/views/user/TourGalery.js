@@ -1,4 +1,4 @@
-import TourCard from "../components/TourCard";
+import TourCard from "../../components/tour/TourCard";
 
 export default function TourGalery() {
     return (

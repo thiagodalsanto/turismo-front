@@ -1,4 +1,4 @@
-import DashboardCard from "../../components/DashboardCard";
+import DashboardCard from "../../components/dashboard/DashboardCard";
 
 export default function DashboardHome() {
     return (
@@ -39,12 +39,10 @@ export default function DashboardHome() {
                         </div>
                         <ul class="flex flex-col items-center p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-200 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-900 md:dark:bg-gray-900 dark:border-gray-700">
                             <li>
-                                <a href="/tour-registration" class="block py-2 px-3 text-white bg-green-500 rounded-lg shadow-md" aria-current="page">Create</a>
+                                <a href="/tour-registration" class="block py-2 px-3 text-white bg-green-500 rounded-lg shadow-md" aria-current="page">Creat Tour</a>
                             </li>
                             <li>
-                                <a href="/" class="block py-2 px-3 text-black rounded bg-gray-200 dark:bg-gray-900  dark:text-white" aria-current="page">
-                                    Filter
-                                </a> 
+                                <a href="/package-registration" class="block py-2 px-3 text-white bg-green-500 rounded-lg shadow-md" aria-current="page">Create Package</a>
                             </li>
                         </ul>
                     </div>

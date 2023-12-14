@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AppRoutes from './AppRouter';
-import NavBar from './components/NavBar.js';
+import NavBar from './components/navbar/NavBar.js';
 import { useEffect, useState } from "react";
 
 export default function App() {
