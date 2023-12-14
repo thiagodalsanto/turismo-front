@@ -1,7 +1,27 @@
 import { Link, useLocation } from "react-router-dom";
+import { useContext, useEffect, useState } from 'react';
+import AuthContext from '../../contexts/auth';
 
 export default function NavBar({ darkMode, setDarkMode }) {
     const location = useLocation();
+
+    const auth = useContext(AuthContext);
+    const [adm, setAdm] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const adm = await auth.isAdm(auth.token, auth.id);
+            setAdm(adm);
+            console.log(adm);
+          } catch (error) {
+            setAdm(false);
+            console.error('Erro ao obter informações:', error);
+          }
+        };
+        console.log('1');
+        fetchData();
+      }, [auth.id, auth.token, auth]);
 
     return (
         <nav class="bg-stone-200 border-gray-200 dark:bg-gray-900">
@@ -25,9 +45,18 @@ export default function NavBar({ darkMode, setDarkMode }) {
                         </svg> }
                     </button>
                 </a>
-                <a href="/user/login">
-                    <button type="button" class="text-black dark:text-white bg-gray-300 hover:bg-gray-400 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-fuchsia-800">Sign In</button>
-                </a>
+                <> 
+                {auth.id ? (
+                    <a onClick={auth.logout}>
+                        <button type="button" class="text-black dark:text-white bg-gray-300 hover:bg-gray-400 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-fuchsia-800">Logout</button>
+                    </a> 
+                   ) : (
+                    <a href="/user/login">
+                        <button type="button" class="text-black dark:text-white bg-gray-300 hover:bg-gray-400 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-fuchsia-800">Sign In</button>
+                    </a>
+                    )}
+                </>
+                
                 <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
                 <span class="sr-only">Main Menu</span>
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
