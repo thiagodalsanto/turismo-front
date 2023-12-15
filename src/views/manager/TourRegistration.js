@@ -1,4 +1,4 @@
-import TourForm from "../../components/TourForm";
+import TourForm from "../../components/tour/TourForm";
 
 export default function TourRegistration() {
     return (
