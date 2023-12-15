@@ -1,18 +1,39 @@
-import TourCard from "../../components/tour/TourCard";
+import DashboardCard from "../../components/dashboard/DashboardCard";
+import { useContext, useEffect, useState } from 'react';
+import AuthContext from '../../contexts/auth';
+
 
 export default function TourGalery() {
+    const auth = useContext(AuthContext);
+    const [tours, setTours] = useState([]);
+
+    useEffect(() => {
+        const checkAdminStatus = async () => {
+          try {
+            const tours = await auth.Tours(auth.token);
+            setTours(tours);
+          } catch (error) {
+            setTours(null);
+            console.error('Erro ao verificar se o usuário é administrador:', error);
+          }
+        };
+    
+        checkAdminStatus();
+    }, [auth]);
+
     return (
         <>
-            <section class="pt-10 pb-16 bg-stone-200 dark:bg-gray-900 flex justify-center align-center h-screen">
-                <div className="grid grid-cols-4 gap-x-4 gap-y-4">
-                    <TourCard imageURL={"https://encurtador.com.br/bksMT"} placeName={"El Nido, Philippines"} rating={"4.4"} price={"599"}/>
-                    <TourCard imageURL={"https://encurtador.com.br/mIL69"} placeName={"Soneva Jani, Noonu Atoll, Maldives"} rating={"5.0"} price={"899"}/>
-                    <TourCard imageURL={"https://encurtador.com.br/suvGT"} placeName={"Lauterbrunnen, Switzerland"} rating={"4.9"} price={"599"}/>
-                    <TourCard imageURL={"https://encurtador.com.br/owzQY"} placeName={"Lofoten Islands, Svolvaer, Norway"} rating={"4.8"} price={"599"}/>
-                    <TourCard imageURL={"https://encurtador.com.br/bsGQY"} placeName={"Ghent, Belgium"} rating={"4.7"} price={"599"}/>
-                    <TourCard imageURL={"https://encurtador.com.br/pJX45"} placeName={"Porto, Portugal"} rating={"4.6"} price={"599"}/>
-                </div>
-            </section>
+            <div class="lg:flex justify-center flex-wrap w-full pt-8 bg-stone-200 dark:bg-gray-900 h-max min-h-screen pb-12">
+                {tours.map(item => (
+                    <DashboardCard 
+                        tourName={item.destino}
+                        tourImage={item.imagem}
+                        tourValue={item.preco}
+                        tourDescription={item.itinerario}
+
+                    />
+                ))}
+            </div>
         </>
     );
 }

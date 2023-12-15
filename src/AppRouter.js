@@ -3,11 +3,10 @@ import NotFound from "./views/commom/NotFound";
 import UserRegisterForm from "./views/user/UserRegisterForm";
 import UserForm from "./views/user/UserForm";
 
-import DashboardHome from "./views/manager/DashboardHome";
 import TourRegistration from "./views/manager/TourRegistration";
 import PackageRegistration from "./views/manager/PackageRegistration";
 
-// import TourGalery from "./views/user/TourGalery";
+import TourGalery from "./views/user/TourGalery";
 import PackageGalery from "./views/user/PackageGalery";
 // import DetailPage from "./views/user/DetailPage";
 import PackageDetailPage from "./views/user/PackageDetailPage";
@@ -63,11 +62,10 @@ const AppRoutes = () => {
                 {/* User */}
                 <Route path="/user-home" element={ <Private Item={UserHome}/> } />
                 <Route path="/cart" element={ <Private Item={CartPage} /> } />
-                {/* <Route path="/tour" element={ <TourGalery/> } />
-                <Route path="/tour-detail/" element={ <DetailPage/> } /> */}
+                {/* <Route path="/tour-detail/" element={ <DetailPage/> } /> */} 
 
                 {/* Manager */}
-                <Route path="/manager-home" element={ <IsAdm Item={DashboardHome} /> } />
+                <Route path="/tour" element={ <IsAdm Item={TourGalery}/> } />
                 <Route path="/tour-registration" element={ <IsAdm Item={TourRegistration}/> } />
                 <Route path="/package-registration" element={ <IsAdm Item={PackageRegistration}/> } />
 
