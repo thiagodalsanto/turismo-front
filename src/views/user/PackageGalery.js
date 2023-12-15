@@ -30,6 +30,7 @@ export default function PackageGalery() {
                     dataVolta={item.dataFinal}
                     img={item.passeios[0].imagem}
                     nome={item.passeios[0].destino}
+                    agencia={item.agencia.nome}
                     id={item.id}
                 />
             ))}

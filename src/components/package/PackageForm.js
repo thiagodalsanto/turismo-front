@@ -27,8 +27,8 @@ const SelectWithAddRemove = ({ options, onAddOption }) => {
             </button>
           </div>
         </div>
-      );      
-  };
+    );      
+};
 
 const PackageForm = () => {
     const [selectedOptions, setSelectedOptions] = useState([]);

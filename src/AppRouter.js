@@ -61,7 +61,7 @@ const AppRoutes = () => {
 
                 {/* User */}
                 <Route path="/user-home" element={ <Private Item={UserHome}/> } />
-                <Route path="/cart" element={ <Private Item={CartPage} /> } />
+                <Route path="/profile" element={ <Private Item={CartPage} /> } />
                 {/* <Route path="/tour-detail/" element={ <DetailPage/> } /> */} 
 
                 {/* Manager */}
